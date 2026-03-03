@@ -1,0 +1,450 @@
+:root {
+    --primary-color: #1a1a2e;
+    --secondary-color: #16213e;
+    --accent-color: #0f3460;
+    --highlight-color: #e94560;
+    --text-light: #f1f1f1;
+    --text-dark: #333;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* DARK THEME */
+[data-theme="dark"] {
+    --primary-color: #121212;
+    --secondary-color: #1e1e1e;
+    --accent-color: #2d2d2d;
+    --highlight-color: #bb86fc;
+    --text-light: #e0e0e0;
+    --text-dark: #f5f5f5;
+    --card-bg: #2d2d2d;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-dark);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--secondary-color) !important;
+    box-shadow: var(--shadow);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--highlight-color) !important;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: var(--text-light) !important;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--highlight-color) !important;
+}
+
+/* DROPDOWN */
+.dropdown-menu {
+    background-color: var(--secondary-color);
+    border: none;
+    box-shadow: var(--shadow);
+}
+
+.dropdown-item {
+    color: var(--text-light);
+}
+
+.dropdown-item:hover {
+    background-color: var(--accent-color);
+    color: var(--highlight-color);
+}
+
+/* HERO SECTION */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://images.unsplash.com/photo-1523170335258-f5ed11844a49');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* CATEGORIES */
+.watch-categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.category-btn {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: var(--shadow);
+}
+
+.category-btn:hover {
+    background-color: var(--highlight-color);
+    transform: translateY(-3px);
+}
+
+/* WATCH CARD */
+.watch-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+    margin-bottom: 2rem;
+}
+
+.watch-card:hover {
+    transform: translateY(-10px);
+}
+
+.watch-img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.watch-card-body {
+    padding: 1.5rem;
+}
+
+.watch-title {
+    font-weight: 700;
+    color: var(--highlight-color);
+    margin-bottom: 0.5rem;
+}
+
+.watch-price {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 1.2rem;
+}
+
+/* BUTTON */
+.buy-btn {
+    background-color: var(--highlight-color);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+.buy-btn:hover {
+    background-color: #d13454;
+    transform: scale(1.05);
+}
+
+/* MODALS */
+.modal-content {
+    background-color: var(--card-bg);
+    color: var(--text-dark);
+}
+
+.form-control {
+    background-color: var(--accent-color);
+    border: 1px solid var(--highlight-color);
+    color: var(--text-light);
+}
+
+.form-control:focus {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    border-color: var(--highlight-color);
+    box-shadow: 0 0 0 0.25rem rgba(233, 69, 96, 0.25);
+}
+
+/* AUTH */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    max-width: 450px;
+    width: 100%;
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 3rem 0;
+    margin-top: 3rem;
+}
+
+/* INVOICE */
+.invoice-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    max-width: 800px;
+    margin: 0 auto;
+    color: #333;
+}
+
+.invoice-header {
+    border-bottom: 2px solid var(--highlight-color);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section {
+        height: 50vh;
+    }
+}
+
+/* LOADER */
+.loading-spinner {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* ===== DARK MODE ===== */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode .navbar,
+.dark-mode .card,
+.dark-mode .modal-content {
+    background-color: #1e1e1e !important;
+    color: #ffffff;
+}
+
+.dark-mode .card {
+    border-color: #333;
+}
+
+.dark-mode input,
+.dark-mode textarea {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border-color: #444;
+}
+
+/* ================= ABOUT SECTION PREMIUM FIXED ================= */
+.about-section {
+    background: linear-gradient(135deg, #16213e, #1a1a2e);
+    padding: 100px 0;
+}
+
+.about-section .container {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* FORCE TEXT WHITE */
+.about-section,
+.about-section h2,
+.about-section p {
+    color: #ffffff !important;
+}
+
+.about-section p {
+    opacity: 0.9;
+    line-height: 1.8;
+}
+
+.about-img {
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    transition: transform 0.4s ease;
+}
+
+.about-img:hover {
+    transform: scale(1.05);
+}
+/* ================= CONTACT SECTION ================= */
+.contact-section {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #ffffff;
+    padding: 80px 0;
+}
+
+.contact-section h2 {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.contact-section p {
+    color: #cbd5e1;
+}
+
+.contact-section .form-control {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+}
+
+.contact-section .form-control::placeholder {
+    color: #cbd5e1;
+}
+
+.contact-section .form-control:focus {
+    background: rgba(255,255,255,0.12);
+    border-color: #38bdf8;
+    box-shadow: none;
+    color: white;
+}
+
+.contact-section button {
+    background: #38bdf8;
+    border: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.contact-section button:hover {
+    background: #0ea5e9;
+}
+/* MOBILE */
+@media (max-width: 768px) {
+    .about-section {
+        text-align: center;
+    }
+
+    .about-img {
+        margin-top: 20px;
+    }
+}
+
+/* ================= BUTTON ANIMATIONS ================= */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* ================= FEATURED CAROUSEL ================= */
+.watch-card .card {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.watch-card img {
+    transition: transform 0.4s ease;
+}
+
+.watch-card:hover img {
+    transform: scale(1.08);
+}
+
+.watch-card .card-body h5 {
+    font-weight: 700;
+}
+
+.watch-card .card-body button {
+    border-radius: 30px;
+}
+
+/* ================= NAVBAR TRANSITION ================= */
+.navbar-collapse {
+    transition: all 0.4s ease;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        background: var(--secondary-color);
+        padding: 15px;
+        border-radius: 12px;
+    }
+}
+
+/* ================= WATCH PRICE STYLING ================= */
+
+.price-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* Original price (striked) */
+.original-price {
+    font-size: 1.2rem;
+    color: #9ca3af;              /* visible grey */
+    text-decoration: line-through;
+    opacity: 0.8;
+}
+
+/* Discounted price */
+.discounted-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--highlight-color); /* pink/red from theme */
+}
+
+/* Dark mode support */
+.dark-mode .original-price {
+    color: #b0b0b0;
+}
+
+.dark-mode .discounted-price {
+    color: #ff6b9c;
+}
+
+.mt-3{
+    color: var(--text-light);
+}
