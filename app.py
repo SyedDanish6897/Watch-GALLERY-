@@ -63,9 +63,9 @@ mail = Mail(app)
 # ================= MODELS =================
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(150), unique=True, nullable=False)
-    password = db.Column(db.String(150), nullable=False)
-    full_name = db.Column(db.String(150))
+    email = db.Column(db.String(300), unique=True, nullable=False)
+    password = db.Column(db.String(300), nullable=False)
+    full_name = db.Column(db.String(300))
     dob = db.Column(db.Date)
     address = db.Column(db.String(300))
     contact_no = db.Column(db.String(20))
@@ -428,3 +428,4 @@ if __name__ == '__main__':
     
 with app.app_context():
     db.create_all()
+
